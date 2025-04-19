@@ -1,0 +1,66 @@
+import 'package:flutter/material.dart';
+
+class SocialButtonsSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        CustomSocialButton(
+          color: const Color(0xFF102397),
+          iconName: 'assets/images/facebook.png', // Đường dẫn đúng cho icon
+          onPressed: () {},
+        ),
+        CustomSocialButton(
+          color: const Color(0xFFff4f38),
+          iconName: 'assets/images/googleplus.png', // Đường dẫn đúng cho icon
+          onPressed: () {},
+        ),
+        CustomSocialButton(
+          color: const Color(0xFF38A1F3),
+          iconName: 'assets/images/twitter.png', // Đường dẫn đúng cho icon
+          onPressed: () {},
+        ),
+        CustomSocialButton(
+          color: const Color(0xFF2867B2),
+          iconName: 'assets/images/linkin.png', // Đường dẫn đúng cho icon
+          onPressed: () {},
+        ),
+      ],
+    );
+  }
+}
+
+class CustomSocialButton extends StatelessWidget {
+  final Color color;
+  final String iconName;
+  final Function() onPressed;
+
+  const CustomSocialButton({
+    super.key,
+    required this.color,
+    required this.iconName,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 20.0),
+      child: Container(
+        width: 45.0,
+        height: 45.0,
+        decoration: BoxDecoration(shape: BoxShape.circle, color: color),
+        child: RawMaterialButton(
+          shape: const CircleBorder(),
+          onPressed: onPressed,
+          child: Image.asset(
+            iconName, // Đường dẫn đúng cho icon
+            width: 24,
+            height: 24,
+          ),
+        ),
+      ),
+    );
+  }
+}
