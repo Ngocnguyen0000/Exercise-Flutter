@@ -1,0 +1,23 @@
+name: flutter_application_bai1
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.3  # Thêm flutter_bloc
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  assets:
+    - assets/images/image1.jpg
+    - assets/images/image2.jpg
+  uses-material-design: true
